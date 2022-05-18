@@ -2,13 +2,25 @@ const displayValue = document.querySelector(".display-value")
 const keyboard = document.querySelector(".keys-container")
 
 const keys = ["+", "-", "×", "÷", "7", "8", "9", "=", "4", "5", "6", "1", "2", "3", "0", ".", "AC"]
-let inputString = []
-let inputInt = []
+let inputStorage = []
+    // let inputInt = []
 let counter = 0
 let displayNumber = 0
+let answer = 0
 
 const addNumber = (key) => {
+    displayNumber += key
+    displayNumInt = parseInt(displayNumber)
+    displayValue.innerHTML = displayNumInt
+        // console.log(displayValue)
+        // console.log(displayNumInt)
+}
 
+const storeValue = () => {
+    inputStorage.push(displayNumInt)
+    displayNumInt = 0
+    displayNumber = 0
+    console.log(inputStorage)
 }
 
 // const storeValue = (arr) => {
@@ -49,12 +61,14 @@ const handleClick = (key) => {
     if (key === "AC") {
         allClear()
         return
-    } 
+    }
     addNumber(key)
 }
 
 const addition = () => {
-    storeValue(inputString)
+    storeValue()
+    answer = inputStorage[0] + inputStorage[1]
+    counter++
 }
 
 const subtraction = () => {
@@ -70,7 +84,7 @@ const division = () => {
 }
 
 const calculate = () => {
-
+    displayValue.innerHTML = answer
 }
 
 const decimalPoint = () => {
