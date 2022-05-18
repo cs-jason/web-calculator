@@ -1,0 +1,77 @@
+* {
+    font-family: Inter;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.calc-container {
+    width: 483px;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-container {
+    background-color: #212121;
+    color: white;
+    height: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.display-value {
+    font-weight: 10;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.keys-container {
+    background-color: #6a6a6a;
+    display: grid;
+    gap: 1px;
+    font-size: 24px;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px 80px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.keys-container button {
+    width: 120px;
+    height: 80px;
+}
+
+button {
+    border-radius: 0px;
+    border: 0px;
+}
+
+#key-\= {
+    background-color: #eb7734;
+    height: 323px;
+    grid-row: span 4 / auto;
+    border-bottom-right-radius: 10px;
+}
+
+#key-\+, #key-\-, #key-×, #key-÷ {
+    background-color: #ababab;
+}
+
+#key-\0 {
+    border-bottom-left-radius: 10px;
+}
+
